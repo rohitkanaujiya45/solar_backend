@@ -29,7 +29,7 @@ async function getAIResponse(userMessage) {
             {
                 model: 'google/gemini-2.0-pro-exp-02-05:free',
                 messages: [{ role: 'user', content: userMessage }],
-                max_tokens: 100 // Limits response size
+                max_tokens: 100 
             },
             {
                 headers: {
@@ -38,7 +38,7 @@ async function getAIResponse(userMessage) {
                     'HTTP-Referer': SITE_URL,
                     'X-Title': SITE_NAME
                 },
-                timeout: 10000 // 10-second timeout to avoid hanging requests
+                timeout: 10000
             }
         );
 
@@ -69,6 +69,6 @@ app.post('/ask', async (req, res) => {
     }
 });
 
-// Export the app module
+
 module.exports = app;
 
