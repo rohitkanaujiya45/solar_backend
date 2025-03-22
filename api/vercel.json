@@ -1,15 +1,14 @@
 {
-    "version": 2,
-    "functions": {
-      "api/*.js": {
-        "runtime": "nodejs18.x"
-      }
-    },
-    "routes": [
-      {
-        "src": "/ask",
-        "dest": "/api/ask"
-      }
-    ]
-  }
-  
+  "version": 2,
+  "functions": {
+    "api/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/ask",
+      "dest": "/api/ask.js"
+    }
+  ]
+}
