@@ -26,8 +26,6 @@ async function getAIResponse(userMessage) {
 
         const isDetailedQuery = userMessage.toLowerCase().includes("how does it work in depth?") || 
                                 userMessage.toLowerCase().includes("step-by-step") ||
-                                userMessage.toLowerCase().includes("detailed process") ||
-                                userMessage.toLowerCase().includes("full explanation") ||
                                 userMessage.toLowerCase().includes("describe fully") ||
                                 userMessage.toLowerCase().includes("technical explanation");
 
