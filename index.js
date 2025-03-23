@@ -18,41 +18,6 @@ if (!API_KEY) {
     console.error("⚠️ OPENROUTER_API_KEY is not defined. Make sure .env is loaded.");
 }
 
-// async function getAIResponse(userMessage) {
-//     try {
-//         if (!userMessage) {
-//             throw new Error("User message is missing");
-//         }
-
-//         const response = await axios.post(
-//             SITE_URL,
-//             {
-//                 model: 'google/gemini-2.0-pro-exp-02-05:free',
-//                 messages: [{ role: 'user', content: userMessage }],
-//                 max_tokens: 100 
-//             },
-//             {
-//                 headers: {
-//                     'Authorization': `Bearer ${API_KEY}`,
-//                     'Content-Type': 'application/json',
-//                     'HTTP-Referer': SITE_URL,
-//                     'X-Title': SITE_NAME
-//                 },
-//                 timeout: 10000
-//             }
-//         );
-
-//         if (!response.data || !response.data.choices || response.data.choices.length === 0) {
-//             throw new Error("Invalid response from AI API");
-//         }
-
-//         return response.data.choices[0]?.message?.content?.trim() || "No valid response received.";
-//     } catch (error) {
-//         console.error('API Error:', error.response?.data || error.message);
-//         return `Error: ${JSON.stringify(error.response?.data) || error.message}`;
-//     }
-// }
-
 async function getAIResponse(userMessage) {
     try {
         if (!userMessage) {
@@ -125,7 +90,7 @@ async function getAIResponse(userMessage) {
                     'HTTP-Referer': SITE_URL,
                     'X-Title': SITE_NAME
                 },
-                timeout: 30000 
+                timeout: 10000 
             }
         );
 
