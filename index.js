@@ -87,7 +87,7 @@ async function getAIResponse(userMessage) {
                     'HTTP-Referer': SITE_URL,
                     'X-Title': SITE_NAME
                 },
-                timeout: 80000 
+                timeout: 100000 
             }
         );
 
