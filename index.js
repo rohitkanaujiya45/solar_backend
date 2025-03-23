@@ -32,7 +32,7 @@ async function getAIResponse(userMessage) {
                                 userMessage.toLowerCase().includes("describe fully") ||
                                 userMessage.toLowerCase().includes("technical explanation");
 
-        const maxTokens = isDetailedQuery ? 2000 : 200;
+        const maxTokens = isDetailedQuery ? 5000 : 200;
 
         const prompt = `You are a **solar energy expert**. Your goal is to provide **the most accurate and structured response possible**.
 
