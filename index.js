@@ -24,15 +24,14 @@ async function getAIResponse(userMessage) {
             throw new Error("User message is required.");
         }
 
-        const isDetailedQuery = userMessage.toLowerCase().includes("explain in detail") || 
-                                userMessage.toLowerCase().includes("how does it work in depth?") || 
+        const isDetailedQuery = userMessage.toLowerCase().includes("how does it work in depth?") || 
                                 userMessage.toLowerCase().includes("step-by-step") ||
                                 userMessage.toLowerCase().includes("detailed process") ||
                                 userMessage.toLowerCase().includes("full explanation") ||
                                 userMessage.toLowerCase().includes("describe fully") ||
                                 userMessage.toLowerCase().includes("technical explanation");
 
-        const maxTokens = isDetailedQuery ? 1500 : 200;
+        const maxTokens = isDetailedQuery ? 2000 : 200;
 
         const prompt = `You are a **solar energy expert**. Your goal is to provide **the most accurate and structured response possible**.
 
